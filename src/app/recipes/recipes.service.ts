@@ -71,4 +71,13 @@ export class RecipesService {
       }),
     };
   }
+
+  /**
+   * deleteRecipe(id) will delete the repective recipe
+   */
+  public deleteRecipe(recipeID: string) {
+    this.recipes = this.recipes.filter((recipe) => {
+      return recipe.id !== recipeID;
+    });
+  }
 }
